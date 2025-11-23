@@ -321,7 +321,7 @@ export const Section2AddressHistory = ({ form }: Props) => {
             { value: "Yes", label: "Yes" },
             { value: "No", label: "No" },
           ]}
-          value={livedOutsideUK || "No"}
+          value={livedOutsideUK}
           onChange={(value) => setValue("livedOutsideUK", value as "Yes" | "No")}
         />
 
@@ -343,7 +343,7 @@ export const Section2AddressHistory = ({ form }: Props) => {
             { value: "Yes", label: "Yes" },
             { value: "No", label: "No" },
           ]}
-          value={militaryBase || "No"}
+          value={militaryBase}
           onChange={(value) => setValue("militaryBase", value as "Yes" | "No")}
         />
 

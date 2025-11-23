@@ -154,7 +154,7 @@ export const Section3Premises = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={useAdditionalPremises || "No"}
+        value={useAdditionalPremises}
         onChange={(value) => setValue("useAdditionalPremises", value as "Yes" | "No")}
       />
 
@@ -209,7 +209,7 @@ export const Section3Premises = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={watch("outdoorSpace") || "No"}
+        value={watch("outdoorSpace")}
         onChange={(value) => setValue("outdoorSpace", value as "Yes" | "No")}
       />
 
@@ -221,7 +221,7 @@ export const Section3Premises = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={pets || "No"}
+        value={pets}
         onChange={(value) => setValue("pets", value as "Yes" | "No")}
       />
 

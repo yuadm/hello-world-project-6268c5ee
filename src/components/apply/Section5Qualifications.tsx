@@ -60,7 +60,7 @@ export const Section5Qualifications = ({ form }: Props) => {
             { value: "Yes", label: "Yes" },
             { value: "No", label: "No" },
           ]}
-          value={firstAidCompleted || "No"}
+          value={firstAidCompleted}
           onChange={(value) => setValue("firstAid.completed", value as "Yes" | "No")}
         />
 
@@ -115,7 +115,7 @@ export const Section5Qualifications = ({ form }: Props) => {
               { value: "Yes", label: "Yes" },
               { value: "No", label: "No" },
             ]}
-            value={watch("safeguarding.completed") || "No"}
+            value={watch("safeguarding.completed")}
             onChange={(value) => setValue("safeguarding.completed", value as "Yes" | "No")}
           />
 
@@ -140,7 +140,7 @@ export const Section5Qualifications = ({ form }: Props) => {
               { value: "Yes", label: "Yes" },
               { value: "No", label: "No" },
             ]}
-            value={watch("eyfsChildminding.completed") || "No"}
+            value={watch("eyfsChildminding.completed")}
             onChange={(value) => setValue("eyfsChildminding.completed", value as "Yes" | "No")}
           />
 
@@ -165,7 +165,7 @@ export const Section5Qualifications = ({ form }: Props) => {
               { value: "Yes", label: "Yes" },
               { value: "No", label: "No" },
             ]}
-            value={watch("level2Qual.completed") || "No"}
+            value={watch("level2Qual.completed")}
             onChange={(value) => setValue("level2Qual.completed", value as "Yes" | "No")}
           />
 
