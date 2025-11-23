@@ -90,7 +90,7 @@ export const Section4Service = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={workWithOthers || "No"}
+        value={workWithOthers}
         onChange={(value) => setValue("workWithOthers", value as "Yes" | "No")}
       />
 
@@ -262,7 +262,7 @@ export const Section4Service = ({ form }: Props) => {
             { value: "Yes", label: "Yes" },
             { value: "No", label: "No" },
           ]}
-          value={watch("overnightCare") || "No"}
+          value={watch("overnightCare")}
           onChange={(value) => setValue("overnightCare", value as "Yes" | "No")}
         />
       </div>

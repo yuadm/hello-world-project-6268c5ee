@@ -125,7 +125,7 @@ export const Section7People = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={adultsInHome || "No"}
+        value={adultsInHome}
         onChange={(value) => setValue("adultsInHome", value as "Yes" | "No")}
       />
 
@@ -190,7 +190,7 @@ export const Section7People = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={childrenInHome || "No"}
+        value={childrenInHome}
         onChange={(value) => setValue("childrenInHome", value as "Yes" | "No")}
       />
 

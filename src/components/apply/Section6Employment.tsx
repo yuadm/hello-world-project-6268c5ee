@@ -164,7 +164,7 @@ export const Section6Employment = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={childVolunteered || "No"}
+        value={childVolunteered}
         onChange={(value) => setValue("childVolunteered", value as "Yes" | "No")}
       />
 
@@ -208,7 +208,7 @@ export const Section6Employment = ({ form }: Props) => {
             { value: "Yes", label: "Yes" },
             { value: "No", label: "No" },
           ]}
-          value={watch("reference1Childcare") || "No"}
+          value={watch("reference1Childcare")}
           onChange={(value) => setValue("reference1Childcare", value as "Yes" | "No")}
         />
       </div>
@@ -231,7 +231,7 @@ export const Section6Employment = ({ form }: Props) => {
             { value: "Yes", label: "Yes" },
             { value: "No", label: "No" },
           ]}
-          value={watch("reference2Childcare") || "No"}
+          value={watch("reference2Childcare")}
           onChange={(value) => setValue("reference2Childcare", value as "Yes" | "No")}
         />
       </div>

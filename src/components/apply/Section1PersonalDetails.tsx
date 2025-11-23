@@ -97,7 +97,7 @@ export const Section1PersonalDetails = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={otherNames || "No"}
+        value={otherNames}
         onChange={(value) => setValue("otherNames", value as "Yes" | "No")}
       />
 

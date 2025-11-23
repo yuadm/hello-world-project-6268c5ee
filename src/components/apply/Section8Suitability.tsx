@@ -76,7 +76,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={prevRegOfsted || "No"}
+        value={prevRegOfsted}
         onChange={(value) => setValue("prevRegOfsted", value as "Yes" | "No")}
       />
 
@@ -143,7 +143,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={prevRegAgency || "No"}
+        value={prevRegAgency}
         onChange={(value) => setValue("prevRegAgency", value as "Yes" | "No")}
       />
 
@@ -209,7 +209,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={prevRegOtherUK || "No"}
+        value={prevRegOtherUK}
         onChange={(value) => setValue("prevRegOtherUK", value as "Yes" | "No")}
       />
 
@@ -275,7 +275,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={prevRegEU || "No"}
+        value={prevRegEU}
         onChange={(value) => setValue("prevRegEU", value as "Yes" | "No")}
       />
 
@@ -343,7 +343,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={healthCondition || "No"}
+        value={healthCondition}
         onChange={(value) => setValue("healthCondition", value as "Yes" | "No")}
       />
 
@@ -365,7 +365,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={watch("smoker") || "No"}
+        value={watch("smoker")}
         onChange={(value) => setValue("smoker", value as "Yes" | "No")}
       />
 
@@ -379,7 +379,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={disqualified || "No"}
+        value={disqualified}
         onChange={(value) => setValue("disqualified", value as "Yes" | "No")}
       />
 
@@ -391,7 +391,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={socialServices || "No"}
+        value={socialServices}
         onChange={(value) => setValue("socialServices", value as "Yes" | "No")}
       />
 
@@ -413,7 +413,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={otherCircumstances || "No"}
+        value={otherCircumstances}
         onChange={(value) => setValue("otherCircumstances", value as "Yes" | "No")}
       />
 
@@ -436,7 +436,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={hasDBS || "No"}
+        value={hasDBS}
         onChange={(value) => setValue("hasDBS", value as "Yes" | "No")}
       />
 
@@ -485,7 +485,7 @@ export const Section8Suitability = ({ form }: Props) => {
           { value: "Yes", label: "Yes" },
           { value: "No", label: "No" },
         ]}
-        value={offenceHistory || "No"}
+        value={offenceHistory}
         onChange={(value) => setValue("offenceHistory", value as "Yes" | "No")}
       />
 
