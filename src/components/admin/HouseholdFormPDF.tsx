@@ -1,19 +1,9 @@
-import { Document, Page, Text, View, StyleSheet, Font } from "@react-pdf/renderer";
-
-// Register fonts
-Font.register({
-  family: "Inter",
-  fonts: [
-    { src: "https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2", fontWeight: 400 },
-    { src: "https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2", fontWeight: 600 },
-    { src: "https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hiA.woff2", fontWeight: 700 },
-  ],
-});
+import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
   page: {
     padding: 40,
-    fontFamily: "Inter",
+    fontFamily: "Helvetica",
     fontSize: 10,
     lineHeight: 1.5,
   },
@@ -24,7 +14,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontWeight: 700,
+    fontWeight: "bold",
     color: "#0066cc",
     marginBottom: 5,
   },
@@ -39,7 +29,7 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 14,
-    fontWeight: 700,
+    fontWeight: "bold",
     marginBottom: 10,
     color: "#1a1a1a",
   },
@@ -49,7 +39,7 @@ const styles = StyleSheet.create({
   },
   label: {
     width: "35%",
-    fontWeight: 600,
+    fontWeight: "bold",
     color: "#333",
   },
   value: {
@@ -64,7 +54,7 @@ const styles = StyleSheet.create({
   },
   cardTitle: {
     fontSize: 11,
-    fontWeight: 600,
+    fontWeight: "bold",
     marginBottom: 6,
     color: "#0066cc",
   },
@@ -192,7 +182,7 @@ export function HouseholdFormPDF({ formData, memberName, applicantName }: Househ
 
           {formData.previous_names && Array.isArray(formData.previous_names) && formData.previous_names.length > 0 && (
             <View style={{ marginTop: 10 }}>
-              <Text style={{ fontWeight: 600, marginBottom: 6 }}>Previous Names:</Text>
+              <Text style={{ fontWeight: "bold", marginBottom: 6 }}>Previous Names:</Text>
               {formData.previous_names.map((name: any, idx: number) => (
                 <View key={idx} style={styles.card}>
                   <Text>{name.fullName}</Text>
@@ -224,7 +214,7 @@ export function HouseholdFormPDF({ formData, memberName, applicantName }: Househ
 
           {formData.address_history && Array.isArray(formData.address_history) && formData.address_history.length > 0 && (
             <View style={{ marginTop: 10 }}>
-              <Text style={{ fontWeight: 600, marginBottom: 6 }}>Previous Addresses:</Text>
+              <Text style={{ fontWeight: "bold", marginBottom: 6 }}>Previous Addresses:</Text>
               {formData.address_history.map((addr: any, idx: number) => (
                 <View key={idx} style={styles.card}>
                   <Text>{addr.address}</Text>
@@ -260,7 +250,7 @@ export function HouseholdFormPDF({ formData, memberName, applicantName }: Househ
           </View>
 
           <View style={{ marginTop: 15 }}>
-            <Text style={{ fontWeight: 600, marginBottom: 6 }}>DBS Certificate</Text>
+            <Text style={{ fontWeight: "bold", marginBottom: 6 }}>DBS Certificate</Text>
             <View style={styles.fieldRow}>
               <Text style={styles.label}>Has DBS:</Text>
               <Text style={styles.value}>{formData.has_dbs || "No"}</Text>
@@ -280,7 +270,7 @@ export function HouseholdFormPDF({ formData, memberName, applicantName }: Househ
           </View>
 
           <View style={{ marginTop: 15 }}>
-            <Text style={{ fontWeight: 600, marginBottom: 6 }}>Suitability Checks</Text>
+            <Text style={{ fontWeight: "bold", marginBottom: 6 }}>Suitability Checks</Text>
             <View style={styles.fieldRow}>
               <Text style={styles.label}>Criminal History:</Text>
               <Text style={styles.value}>{formData.criminal_history || "No"}</Text>
