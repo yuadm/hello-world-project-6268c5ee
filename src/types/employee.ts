@@ -42,65 +42,7 @@ export interface Employee {
   updated_at: string;
 }
 
-export interface EmployeeHouseholdMember {
-  id: string;
-  employee_id: string;
-  member_type: MemberType;
-  full_name: string;
-  date_of_birth: string;
-  relationship: string | null;
-  email: string | null;
-  dbs_status: DBSStatus;
-  dbs_certificate_number: string | null;
-  dbs_certificate_date: string | null;
-  dbs_certificate_expiry_date: string | null;
-  age_group_changed_at: string | null;
-  created_at: string;
-  updated_at: string;
-  dbs_request_date: string | null;
-  notes: string | null;
-  compliance_status: string;
-  risk_level: string;
-  last_contact_date: string | null;
-  reminder_count: number;
-  last_reminder_date: string | null;
-  reminder_history: any;
-  application_reference: string | null;
-  application_submitted: boolean;
-  response_date: string | null;
-  response_received: boolean;
-  follow_up_due_date: string | null;
-  expiry_reminder_sent: boolean;
-  turning_16_notification_sent: boolean;
-}
-
-export interface EmployeeAssistant {
-  id: string;
-  employee_id: string;
-  first_name: string;
-  last_name: string;
-  email: string | null;
-  phone: string | null;
-  role: string;
-  date_of_birth: string;
-  dbs_status: DBSStatus;
-  dbs_certificate_number: string | null;
-  dbs_certificate_date: string | null;
-  dbs_certificate_expiry_date: string | null;
-  dbs_request_date: string | null;
-  form_token: string | null;
-  form_status: string | null;
-  form_sent_date: string | null;
-  form_submitted_date: string | null;
-  compliance_status: string | null;
-  risk_level: string | null;
-  notes: string | null;
-  reminder_count: number;
-  last_reminder_date: string | null;
-  reminder_history: any;
-  last_contact_date: string | null;
-  follow_up_due_date: string | null;
-  expiry_reminder_sent: boolean;
-  created_at: string;
-  updated_at: string;
-}
+// Note: EmployeeHouseholdMember and EmployeeAssistant data is stored in the unified
+// compliance_household_members and compliance_assistants tables respectively.
+// These interfaces represent filtered views (employee_id IS NOT NULL) of those tables.
+// Use the compliance tables directly in queries with appropriate filters.
