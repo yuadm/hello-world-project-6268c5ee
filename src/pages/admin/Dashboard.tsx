@@ -33,22 +33,23 @@ const AdminDashboard = () => {
     try {
       // Fetch applications
       const { data: applications } = await supabase
-        .from('childminder_applications' as any)
+        .from('childminder_applications')
         .select('status');
 
       const pending = (applications || []).filter((app: any) => app.status === 'pending').length;
 
       // Fetch employees
       const { data: employees } = await supabase
-        .from('employees' as any)
+        .from('employees')
         .select('employment_status');
 
       const active = (employees || []).filter((emp: any) => emp.employment_status === 'active').length;
 
-      // Fetch household members for compliance
+      // Fetch household members for compliance (only employee household members)
       const { data: householdMembers } = await supabase
-        .from('employee_household_members' as any)
-        .select('dbs_status, compliance_status');
+        .from('compliance_household_members')
+        .select('dbs_status, compliance_status')
+        .not('employee_id', 'is', null);
 
       const criticalCount = (householdMembers || []).filter((m: any) => 
         m.compliance_status === 'overdue' || m.dbs_status === 'expired'
