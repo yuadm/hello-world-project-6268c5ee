@@ -1,6 +1,7 @@
+import { useEffect } from "react";
 import { UseFormReturn } from "react-hook-form";
 import { ChildminderApplication } from "@/types/childminder";
-import { RKInput, RKSectionTitle, RKInfoBox } from "./rk";
+import { RKInput, RKSectionTitle } from "./rk";
 import { Plus } from "lucide-react";
 
 interface Props {
@@ -10,6 +11,13 @@ interface Props {
 export const Section6Employment = ({ form }: Props) => {
   const { register, watch, setValue } = form;
   const employmentHistory = watch("employmentHistory") || [];
+
+  // Initialize with one empty employment entry if none exist
+  useEffect(() => {
+    if (!employmentHistory || employmentHistory.length === 0) {
+      setValue("employmentHistory", [{ employer: "", role: "", startDate: "", endDate: "", reasonForLeaving: "" }]);
+    }
+  }, []);
 
   const addEmployment = () => {
     setValue("employmentHistory", [
@@ -31,12 +39,6 @@ export const Section6Employment = ({ form }: Props) => {
 
       {/* Employment History */}
       <div className="space-y-4">
-        {employmentHistory.length === 0 && (
-          <RKInfoBox type="info">
-            Click "Add employment" below to start providing your employment history.
-          </RKInfoBox>
-        )}
-
         <div className="space-y-4">
           {employmentHistory.map((_, index) => (
             <div
