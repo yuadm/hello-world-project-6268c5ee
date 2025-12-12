@@ -363,6 +363,30 @@ const Apply = () => {
             }
           }
         }
+
+        // Create co-childminder compliance records
+        if (data.cochildminders && Array.isArray(data.cochildminders)) {
+          const cochildminderRecords = data.cochildminders.map((cochildminder: any) => ({
+            application_id: applicationId,
+            first_name: cochildminder.firstName,
+            last_name: cochildminder.lastName,
+            date_of_birth: cochildminder.dob,
+            email: cochildminder.email,
+            phone: cochildminder.phone,
+            dbs_status: 'not_requested' as const,
+            form_status: 'not_sent' as const
+          }));
+
+          if (cochildminderRecords.length > 0) {
+            const { error: cochildminderError } = await supabase
+              .from('compliance_cochildminders')
+              .insert(cochildminderRecords);
+            
+            if (cochildminderError) {
+              console.error("Failed to create co-childminder records:", cochildminderError);
+            }
+          }
+        }
       }
 
       toast.success("Application submitted successfully! We'll review and be in touch soon.");
