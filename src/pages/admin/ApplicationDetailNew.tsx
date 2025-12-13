@@ -66,7 +66,6 @@ interface DBApplication {
   applicant_references: any;
   address_history: any;
   employment_gaps: string;
-  worked_with_children: string;
   right_to_work: string;
   previous_names: any;
   place_of_birth: string;
@@ -426,7 +425,6 @@ const ApplicationDetailNew = () => {
             reference2Childcare={references.reference2?.childcare}
             childVolunteered={dbApplication.child_volunteered}
             childVolunteeredConsent={dbApplication.child_volunteered_consent}
-            workedWithChildren={dbApplication.worked_with_children}
           />
 
           <DeclarationCard
