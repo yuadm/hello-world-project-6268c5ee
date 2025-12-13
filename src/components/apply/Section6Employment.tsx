@@ -147,7 +147,7 @@ export const Section6Employment = ({ form }: Props) => {
             <RKInput
               label="Phone number"
               type="tel"
-              {...register("reference1Phone")}
+              {...register("reference1Phone" as any)}
             />
           </div>
           <RKRadio
@@ -185,7 +185,7 @@ export const Section6Employment = ({ form }: Props) => {
             <RKInput
               label="Phone number"
               type="tel"
-              {...register("reference2Phone")}
+              {...register("reference2Phone" as any)}
             />
           </div>
           <RKRadio
