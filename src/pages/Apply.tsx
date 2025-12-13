@@ -214,7 +214,6 @@ const Apply = () => {
             foodHygiene: data.foodHygiene,
             otherTraining: data.otherTraining
           },
-          worked_with_children: data.workedWithChildren,
           employment_history: data.employmentHistory,
           employment_gaps: data.employmentGaps,
           child_volunteered: data.childVolunteered,

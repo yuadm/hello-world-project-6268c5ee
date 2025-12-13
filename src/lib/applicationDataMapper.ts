@@ -38,7 +38,6 @@ interface DBApplication {
   applicant_references: any;
   address_history: any;
   employment_gaps: string;
-  worked_with_children: string;
   right_to_work: string;
   previous_names: any;
   place_of_birth: string;
@@ -165,7 +164,6 @@ export function dbToFormData(dbApp: DBApplication): Partial<ChildminderApplicati
     // Section 6: Employment
     employmentHistory: dbApp.employment_history || [],
     employmentGaps: dbApp.employment_gaps,
-    workedWithChildren: dbApp.worked_with_children as "Yes" | "No",
     childVolunteered: dbApp.child_volunteered as "Yes" | "No",
     childVolunteeredConsent: dbApp.child_volunteered_consent,
     reference1Name: references.reference1?.name,
